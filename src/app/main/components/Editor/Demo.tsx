@@ -10,9 +10,9 @@ const Demo = () => {
 
 
 
-    const [newTarget, setNewTarget] = useState("")
+
     const [inputString, setInputString] = useState<any>("<button>Click me</button>") // default
-    const [currentCode, setCurrentCode] = useState(`() => {return <button>Click me</button>}`)
+   
     
 
 
@@ -22,9 +22,10 @@ const Demo = () => {
         set(ref(database, `component/${uid}/`), str)
        
     }
-    const getData = async (str: string, uid: string) => {
-        const response = await fetch(`https://testdb-fc7b9-default-rtdb.europe-west1.firebasedatabase.app/component.json`)
+    const getData = async (uid: string) => {
+        const response = await fetch(`https://testdb-fc7b9-default-rtdb.europe-west1.firebasedatabase.app/component/${uid}/.json`)
         const data = await response.json()
+        return data;
     }   
 
 
@@ -35,6 +36,11 @@ const Demo = () => {
         postData(e.currentTarget.value, "1001")
     }
 
+    const previewButton = async () => {
+        const toView = await getData("1001")
+        console.log(toView)
+    }
+
 
     return (
         <>
@@ -42,7 +48,7 @@ const Demo = () => {
             <section className={classes.panelLeft} id="panelLeft">
                 <h6 className={classes.heading}>Text Editor</h6>
                 <textarea id="textarea" onChange={handleChange} value={inputString} className={classes.input} />
-                <button className={classes.prevbtn}>Preview</button>
+                <button onClick={previewButton} className={classes.prevbtn}>Preview</button>
             </section>
 
             <section className={classes.panelRight} id="panelRight">
