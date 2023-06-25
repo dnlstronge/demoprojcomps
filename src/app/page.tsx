@@ -5,7 +5,6 @@ import Nav from "../Nav/Nav"
 export default function Home() {
   return (
     <main className=''>
-      <Nav />
       <Main />
     </main>
   )

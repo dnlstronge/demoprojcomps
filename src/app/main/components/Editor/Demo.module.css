@@ -1,4 +1,6 @@
-
+.top {
+    margin-bottom: 2rem;
+}
 .container {
     display: flex;
     flex-direction: row;
@@ -60,6 +62,57 @@
 
 }
 .prevbtn:hover {
-    background: rgb(161, 160, 160);
+    background: rgb(238, 237, 237);
     cursor: pointer;
+}
+
+
+/* Editor preview styles */
+
+.liveEdit {
+    height: 20rem;
+    width: 45%;
+}
+
+.livePrev {
+    height: 20rem;
+    width: 45%;
+    background-color: rgb(225, 219, 211);
+}
+.livePrev button {
+    background: grey;
+    height: 3rem;
+    width: 6rem;
+    margin: 4rem;
+    border-radius: 6px;
+    border: 2px solid black;
+}
+.livePrev button:hover {
+   color: black;
+   background: rgb(213, 211, 211);
+}
+
+.livePrev h3 {
+    background: grey;
+    color: white;
+    width: 100%;
+
+}
+.livePrev div {
+    background: black;
+    width: 100%;
+    color: white;
+    margin-top: 3rem;
+    height: 40%;
+
+}
+.liveErr {
+    font-size: 8px;
+    height: 10rem;
+    width: 10rem;
+}
+.livePrev p {
+    color: black;
+    text-align: center;
+    margin: 1rem;
 }

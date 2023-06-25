@@ -1,12 +1,12 @@
 import React from 'react'
 import classes from "./Main.module.css"
-import Button from './components/Button/Button'
+import Demo from './components/Editor/Demo'
 
 
 const main = () => {
   return (
     <div className={classes.container}>
-        <Button />
+        <Demo/>
     </div>
   )
 }
