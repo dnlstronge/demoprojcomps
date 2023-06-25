@@ -5,7 +5,7 @@ export default function Page() {
   const router = useRouter()
 
   const [id, setId] = useState('')
-  const [stringData, setStringData] = useState()
+  const [stringData, setStringData] = useState('')
 
   console.log(id);
   let component = '' // Query the DB with the ID to get this
