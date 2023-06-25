@@ -10,7 +10,7 @@ const Demo = () => {
 
 
 
-
+    const currentUser = "1001" // get from auth?? 
     const [inputString, setInputString] = useState<any>("<button>Click me</button>") // default
    
     
@@ -22,8 +22,8 @@ const Demo = () => {
         set(ref(database, `component/${uid}/`), str)
        
     }
-    const getData = async (uid: string) => {
-        const response = await fetch(`https://testdb-fc7b9-default-rtdb.europe-west1.firebasedatabase.app/component/${uid}/.json`)
+    const getData = async () => {
+        const response = await fetch(`https://testdb-fc7b9-default-rtdb.europe-west1.firebasedatabase.app/component/.json`)
         const data = await response.json()
         return data;
     }   
@@ -33,16 +33,16 @@ const Demo = () => {
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setInputString(e.currentTarget.value)
-        postData(e.currentTarget.value, "1001")
+        postData(e.currentTarget.value, currentUser )
     }
 
     const previewButton = async () => {
-        const toView = await getData("1001")
+        const toView = await getData()
         console.log(toView)
     }
 
     const handleSave = () => {
-        
+
     }
 
     return (
@@ -52,6 +52,7 @@ const Demo = () => {
                 <h6 className={classes.heading}>Text Editor</h6>
                 <textarea id="textarea" onChange={handleChange} value={inputString} className={classes.input} />
                 <button onClick={previewButton} className={classes.prevbtn}>Preview</button>
+                <button onClick={handleSave} className={classes.prevbtn}>Save</button>
             </section>
 
             <section className={classes.panelRight} id="panelRight">
