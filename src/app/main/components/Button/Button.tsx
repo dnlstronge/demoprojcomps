@@ -46,22 +46,21 @@ const Button = () => {
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       setInputString(e.currentTarget.value)
     }
-    const comp = `const Component = () => { return ( <>
-    `
-    const comp2 = `</> ) `
+    const handlePreview = () => {
+
+    }
+
     return (
         <div className={classes.container}>
             <section className={classes.panelLeft} id="panelLeft">
                 <h6 className={classes.heading}>Text Editor</h6>
-                <p className={classes.rfc}>{comp}</p>
                <textarea id="textarea" onChange={handleChange} value={inputString} className={classes.input} />
-                <p className={classes.rfcend}>{comp2} export default Component</p>
+               <button onClick={handlePreview} className={classes.prevbtn}>Preview</button>
             </section>
             {/* text editor to follow */}
             <section className={classes.panelRight} id="panelRight">
                 <h6 className={classes.heading}>Component</h6>
-                <div className={classes.component}>
-                    <Element inputString={inputString} />
+                <div className={classes.component}>  
                 </div>
             </section>
         </div>
