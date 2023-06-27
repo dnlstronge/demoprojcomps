@@ -1,0 +1,35 @@
+
+
+.container {
+    width: 100%;
+    height: 60rem;
+    background: black;
+    margin: 0;
+}
+.betanav {
+    width: 100%;
+    height: 5rem;
+}
+
+.inputArea {
+    color: rgb(142, 254, 142);
+    font-size: 15px;
+    font-weight: bold;
+    background:rgb(37, 36, 36);
+    height: 20rem;
+    width: 40%;
+    margin-left: 3rem;
+    padding: 1rem;
+}
+
+.outputArea {
+   
+    color: rgb(65, 178, 184);
+    font-size: 15px;
+    font-weight: bold;
+    background:rgb(37, 36, 36);
+    height: 20rem;
+    width: 40%;
+    margin-left: 3rem;
+    padding: 1rem;
+}
