@@ -18,7 +18,15 @@ const code = `<h3 style={{
 
 /* hardcoded examples  */
 
-// button
+const sampleHead = `<h3 style={{
+  background: 'darkslateblue',
+  color: 'white',
+  padding: 8,
+  borderRadius: 4
+}}>
+  Hello Y'all! 👋
+</h3>
+`
 
 const sampleButton = `function  MyButton() { return <h3 style={{
   background: 'black',
@@ -31,6 +39,17 @@ const sampleButton = `function  MyButton() { return <h3 style={{
   Click me!
 </h3>}`
 
+const sampleDiv =  `function  MyDiv() { return <div style={{
+  background: 'black',
+  color: 'white',
+  padding: "4rem",
+  borderRadius: 10,
+  height: "10rem",
+  margin: "2rem"
+  
+}}>
+  I am a DIV!
+</div>}`
 
 
 export default function Home() {
@@ -40,14 +59,7 @@ export default function Home() {
   save output to db, retrieve on select saved and populate state with use effect  */
 
   const [codeInput, setCodeInput] = useState(
-    `<h3 style={{
-      background: 'darkslateblue',
-      color: 'white',
-      padding: 8,
-      borderRadius: 4
-    }}>
-      Hello World! 👋
-    </h3>`
+   ``
   )
 
 
@@ -56,7 +68,10 @@ export default function Home() {
 const handleInput = (e: React.MouseEvent<HTMLButtonElement>) => {
   
   if(e.currentTarget.value === "button") {setCodeInput(sampleButton)}
+  if(e.currentTarget.value === "div") {setCodeInput(sampleDiv)}
+  if(e.currentTarget.value === "head") {setCodeInput(sampleHead)}
 }
+
 const handleReset = () => {
   setCodeInput("")
 }
@@ -70,10 +85,10 @@ const handleReset = () => {
       </h5>
       <section className={classes.buttons}>
         <button onClick={handleInput} value="button" className={classes.btn}>Button</button>
-        <button className={classes.btn}>Div</button>
+        <button onClick={handleInput} value="div"className={classes.btn}>Div</button>
         <button className={classes.btn}>Click Event</button>
         <button className={classes.btn}>Form</button>
-        <button className={classes.btn}>Heading</button>
+        <button onClick={handleInput} value="head" className={classes.btn}>Heading</button>
         <button onClick={handleReset} className={classes.reset}>Clear</button>
       </section>
       <section className={classes.codeeditor} >
