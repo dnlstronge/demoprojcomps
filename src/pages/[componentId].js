@@ -86,7 +86,7 @@ const handleInput = (e) => {
    </div>
     <div className={classes.panels}>
 
-    <section clasName={classes.left}>
+    <section className={classes.left}>
     <h6 className={classes.heading}>
     Default data is loaded when user visits url e.g /button, /div etc. When the text area is edited
     new data is posted separately to db, and retrieved after through side effect in right panel. If the Page
@@ -98,7 +98,8 @@ const handleInput = (e) => {
     <h6 className={classes.heading}>
       Begins with get from db which is default data and the same as in the left text area, when the 
       area on the left is edited, the string is posted elsewhere on the db, and because the change has triggered
-      a side effect a new get issue issued to get the new string
+      a side effect a new get issue issued to get the new string.
+      Want this jsx string to be compiled and output as component.
     </h6>
     <textarea  value={stringData} className={classes.outputArea}></textarea>
     </section>
