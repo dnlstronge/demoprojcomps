@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[402],{3149:function(n,u,e){(window.__NEXT_P=window.__NEXT_P||[]).push(["/PanelSection",function(){return e(474)}])},474:function(n,u,e){"use strict";e.r(u);var _=e(5893);e(7294),u.default=()=>(0,_.jsx)("div",{children:"Panel"})}},function(n){n.O(0,[774,888,179],function(){return n(n.s=3149)}),_N_E=n.O()}]);
