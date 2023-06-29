@@ -3,7 +3,7 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import classes from "./componentid.module.css"
-import Nav from "../Nav/Nav"
+
 import { getDatabase, ref, set } from "firebase/database"
 import { database } from "../../firebase/config"
 

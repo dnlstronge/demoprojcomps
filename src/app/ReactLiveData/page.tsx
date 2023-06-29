@@ -3,7 +3,6 @@ import { ChangeEvent, useState } from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import Image from 'next/image'
 import classes from "./page.module.css"
-import PanelSection from '@/pages/PanelSection';
 
 
 
@@ -143,8 +142,40 @@ export default function Home() {
 
   return (
     <main className=''>
-    
-  <PanelSection route={""} />
+      <h5 className={classes.titleHead}> Demonstration - Implementation of React-live - allows for rendering of components in preview
+        works based of hardcoded strings hooked up to buttons in place of functioning backend. Instead could be
+        supplied with db data saved by user and passed to editor via state/side effect. Would allow  an authenticated user to save
+        working components and recall. Would need to hook up editor output though.
+      </h5>
+      <h5 className={classes.subhead}>
+        If the noInline property is triggered editor render can be used and
+        several components can be used in tandem as shown in the Wrapper and click event example.
+      </h5>
+      <section className={classes.buttons}>
+        <button onClick={handleInput} value="button" className={classes.btn}>Button</button>
+        <button onClick={handleInput} value="div" className={classes.btn}>Div</button>
+       
+        <button onClick={handleInput} value="head" className={classes.btn}>Heading</button>
+        <label className={classes.cbInput} htmlFor='cb'>InLine on</label>
+        <input id="cb" type="checkbox" onClick={handleInline} className={classes.cbCheck} />
+        <button onClick={handleInput} value="click"className={classes.btn}>Click Event</button>
+        <button onClick={handleInput} value="wrapper" className={classes.btn}>Wrapper</button>
+        <button onClick={handleReset} className={classes.reset}>Clear</button>
+      </section>
+      
+      <section className={classes.codeeditor} >
+        <LiveProvider noInline={toggleInline} code={codeInput}>
+          <section className={classes.panels} >
+            <LiveEditor className={classes.edit} />
+            <LivePreview className={classes.prev} />
+          </section>
+          <section className={classes.errorSection}>
+            <h6 className={classes.headError}>Error Log</h6>
+            <LiveError className={classes.error} />
+          </section>
+        </LiveProvider>
+      </section>
+
     </main>
   )
 }

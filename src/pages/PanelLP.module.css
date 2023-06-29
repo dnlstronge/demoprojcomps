@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    background: rgb(34, 34, 45);
+    width: 90%;
+    height: 60rem;
+    flex-direction: row;
+}
+.sidePanel {
+    height: 100%;
+    width: 10rem;
+}
+.btn {
+    background: rgb(69, 69, 73);
+    color: white;
+    height: 3.2rem;
+    width: 8rem;
+    margin-left: 1rem;
+}
+.btn:hover {
+    background: rgb(165, 161, 161);
+    border: 5px solid rgb(61, 61, 75)
+}

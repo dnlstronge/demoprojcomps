@@ -8,9 +8,9 @@ import "../app/globals.css"
 // front end inits node which runs proj + sends server data to front-end. 
 // preview displays preview in template, gets specific route and renders
 
-const PanelSection: React.FC<{route: string}> = () => {
-
-  const [stringInput, setStringInput] = useState(`http://localhost:3000/`)
+const PanelSection: React.FC<{route: string}> = (props) => {
+  const currentURL = window.location.href
+  const [stringInput, setStringInput] = useState(props.route || `http://localhost:3000/`)
   const [showStringInput, setShowStringInput] = useState(false)
   const [inputOne, setInputOne] = useState("")
   const [inputTwo, setInputTwo] = useState("")
@@ -20,18 +20,20 @@ const PanelSection: React.FC<{route: string}> = () => {
 
 
    /* change handlers */ 
-
+const handleChangeInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  setInputOne(e.currentTarget.value)
+}
 
   return (
     <div className={classes.container}>
        <section className={classes.inputSection}>
-        <textarea onChange={} className={classes.input}></textarea>
+        <textarea onChange={handleChangeInput} className={classes.input}></textarea>
         <button onClick={togglePrev} className={classes.prevBtn}>Test Route</button>
       </section>
-      <section className={classes.inputSection}>
+      {/* <section className={classes.inputSection}>
         <textarea className={classes.input}></textarea>
         <button onClick={togglePrev} className={classes.prevBtn}>Preview File</button>
-      </section>
+      </section> */}
 
       <section>
        {/* I FRAME GOES HERE */}
