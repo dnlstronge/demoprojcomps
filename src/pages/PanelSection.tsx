@@ -17,7 +17,7 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
   const [currentHost, setCurrentHost] = useState("")
   const togglePrev = () => {
     setShowStringInput(!showStringInput)
-    const host = location.host
+    const host = location.href
     console.log(host)
     setCurrentHost(host)
   }
@@ -29,16 +29,17 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
     setInputOne(e.currentTarget.value)
   }
   const handleTestHost = () => {
-    const appendURL = `${currentHost}/PanelSection`
+    const appendURL = `${currentHost}`
+    setInputOne(appendURL)
     console.log(appendURL)
   } 
 
   return (
     <div className={classes.container}>
       <section className={classes.inputSection}>
-        <textarea onChange={handleChangeInput} className={classes.input}></textarea>
+        <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
         <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
-        <button onClick={handleTestHost} className={classes.prevBtn}>Test Host URL</button>
+        <button onClick={handleTestHost} className={classes.prevBtn}>Set Host URL</button>
       </section>
 
       {/* <section className={classes.inputSection}>
