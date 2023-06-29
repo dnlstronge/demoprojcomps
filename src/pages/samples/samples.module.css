@@ -3,3 +3,7 @@
     color: white;
     background: grey;
 }
+.btn:hover {
+    background: rgb(209, 207, 207);
+    cursor: pointer;
+}
