@@ -8,30 +8,36 @@ import "../app/globals.css"
 // front end inits node which runs proj + sends server data to front-end. 
 // preview displays preview in template, gets specific route and renders
 
-const PanelSection = () => {
+const PanelSection: React.FC<{route: string}> = () => {
 
   const [stringInput, setStringInput] = useState(`http://localhost:3000/`)
   const [showStringInput, setShowStringInput] = useState(false)
-
-  const setIframe = () => {
+  const [inputOne, setInputOne] = useState("")
+  const [inputTwo, setInputTwo] = useState("")
+  const togglePrev = () => {
       setShowStringInput(!showStringInput)
       }
 
-    
+
+   /* change handlers */ 
+
+
   return (
     <div className={classes.container}>
        <section className={classes.inputSection}>
-        <textarea className={classes.input}></textarea>
-        <button onClick={setIframe} className={classes.prevBtn}>Test Route</button>
+        <textarea onChange={} className={classes.input}></textarea>
+        <button onClick={togglePrev} className={classes.prevBtn}>Test Route</button>
       </section>
       <section className={classes.inputSection}>
         <textarea className={classes.input}></textarea>
-        <button onClick={setIframe} className={classes.prevBtn}>Preview File</button>
+        <button onClick={togglePrev} className={classes.prevBtn}>Preview File</button>
       </section>
 
       <section>
        {/* I FRAME GOES HERE */}
-       <iframe className={classes.iframe} title="Testing Iframe" src={stringInput}></iframe>
+
+       {showStringInput && 
+       <iframe className={classes.iframe} title="Testing Iframe" src={stringInput}></iframe>}
       </section>
     
     </div>
