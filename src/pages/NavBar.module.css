@@ -1,0 +1,11 @@
+.container {
+    width: 100%;
+    background: rgb(35, 34, 34);
+}
+.btn {
+    width: 10rem;
+    height: 3rem;
+}
+.btn:hover {
+    background: rgb(119, 118, 118);
+}

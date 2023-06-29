@@ -1,0 +1,28 @@
+{
+  "pages": {
+    "/layout": [
+      "static/chunks/webpack-8a84feab27283454.js",
+      "static/chunks/bce60fc1-ceec3c28eb04f83b.js",
+      "static/chunks/769-3de72c1fff3b32bf.js",
+      "static/chunks/main-app-59fbe38339ddbf27.js",
+      "static/css/46cf66a568343a1f.css",
+      "static/chunks/app/layout-101a6756d53d932e.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-8a84feab27283454.js",
+      "static/chunks/bce60fc1-ceec3c28eb04f83b.js",
+      "static/chunks/769-3de72c1fff3b32bf.js",
+      "static/chunks/main-app-59fbe38339ddbf27.js",
+      "static/chunks/app/page-6cd0f333cf0dfbb2.js"
+    ],
+    "/ReactLiveData/page": [
+      "static/chunks/webpack-8a84feab27283454.js",
+      "static/chunks/bce60fc1-ceec3c28eb04f83b.js",
+      "static/chunks/769-3de72c1fff3b32bf.js",
+      "static/chunks/main-app-59fbe38339ddbf27.js",
+      "static/chunks/400-b91364771ceac09d.js",
+      "static/css/6b6cdf2447ce3ac3.css",
+      "static/chunks/app/ReactLiveData/page-73ffafc66d636e36.js"
+    ]
+  }
+}

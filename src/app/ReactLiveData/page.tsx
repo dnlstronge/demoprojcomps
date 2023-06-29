@@ -2,7 +2,7 @@
 import { ChangeEvent, useState } from 'react'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import Image from 'next/image'
-import classes from "./page.module.css"
+import classes from "../page.module.css"
 
 
 

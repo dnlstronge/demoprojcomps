@@ -1,0 +1,11 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/samples/SampleOne": "pages/samples/SampleOne.html",
+  "/samples/SampleTwo": "pages/samples/SampleTwo.html",
+  "/PanelSection": "pages/PanelSection.html",
+  "/PanelLP": "pages/PanelLP.html",
+  "/[componentId]": "pages/[componentId].html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
