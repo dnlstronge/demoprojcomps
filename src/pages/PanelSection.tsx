@@ -9,13 +9,14 @@ import "../app/globals.css"
 // preview displays preview in template, gets specific route and renders
 
 const PanelSection: React.FC<{route: string}> = (props) => {
-  const currentURL = window.location.href
-  const [stringInput, setStringInput] = useState(props.route || `http://localhost:3000/`)
+  
+  const [stringInput, setStringInput] = useState("")
   const [showStringInput, setShowStringInput] = useState(false)
   const [inputOne, setInputOne] = useState("")
   const [inputTwo, setInputTwo] = useState("")
   const togglePrev = () => {
       setShowStringInput(!showStringInput)
+      console.log(stringInput)
       }
 
 
@@ -39,7 +40,7 @@ const handleChangeInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
        {/* I FRAME GOES HERE */}
 
        {showStringInput && 
-       <iframe className={classes.iframe} title="Testing Iframe" src={stringInput}></iframe>}
+       <iframe className={classes.iframe} title="Testing Iframe" src={inputOne}></iframe>}
       </section>
     
     </div>
