@@ -1,7 +1,36 @@
+.bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 2rem;
+    background: rgb(56, 57, 93);
+    
+}
+.barBtn {
+    width: 5rem;
+    height: 1.8rem;
+    background: rgb(92, 82, 134);
+    font-size: 12px;
+    margin-left: 80%;
+    margin-right: 2rem;
+    border: 1px solid white;
+    border-radius: 3px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.circle {
+    background: rgb(155, 235, 155);
+    height: 1rem;
+    width: 1rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 0.4rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .container {
     width: 100%;
     background: rgb(34, 34, 45);
-    padding: 2rem;
+    padding: 1rem;
  
 }
 .inputSection {
@@ -19,11 +48,12 @@
 }
 .prevBtn {
     color: white;
-    background: grey;
+    background: rgb(119, 117, 160);
     height: 2rem;
-    width: 8rem;
+    width: 10rem;
     margin-left: 1rem;
     border-radius: 5px;
+    border: 2px solid rgb(150, 150, 199)
 }
 .prevBtn:hover {
     background: white;

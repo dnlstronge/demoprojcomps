@@ -34,36 +34,41 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
     const appendURL = `${currentHost}`
     setInputOne(appendURL)
     console.log(appendURL)
-  } 
+  }
 
   /* animation - dropdown expand*/
 
 
   /* animition - iframe expand */
-  const iframeExpand = showIframe ? classes.iframe : classes.iframeStart 
+  const iframeExpand = showIframe ? classes.iframe : classes.iframeStart
   return (
+    <>
+      <div className={classes.bar}>
+        <button className={classes.barBtn}>Preview</button>
+        <span className={classes.circle}></span>
+      </div>
+      <div className={classes.container}>
+        <section className={classes.inputSection}>
 
-    <div className={classes.container}>
-      <section className={classes.inputSection}>
-        
-        <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
-        <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
-        <button onClick={handleTestHost} className={classes.prevBtn}>Set Current URL</button>
-      </section>
+          <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
+          <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
+          <button onClick={handleTestHost} className={classes.prevBtn}>Set Current URL</button>
+        </section>
 
-      {/* <section className={classes.inputSection}>
+        {/* <section className={classes.inputSection}>
         <textarea className={classes.input}></textarea>
         <button onClick={togglePrev} className={classes.prevBtn}>Preview File</button>
       </section> */}
 
-      <section>
-        {/* IFRAME GOES HERE */}
+        <section>
+          {/* IFRAME GOES HERE */}
 
-       
+
           <iframe className={iframeExpand} title="Testing Iframe" src={inputOne}></iframe>
-      </section>
+        </section>
 
-    </div>
+      </div>
+    </>
   )
 }
 

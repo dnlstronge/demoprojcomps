@@ -9,6 +9,8 @@ import PanelSection from './PanelSection'
 
 const PanelLP= () => {
   return (
+   
+  
     <div className={classes.container}>
       <section className={classes.sidePanel}>
         <button className={classes.btn}>Section</button>
@@ -20,6 +22,7 @@ const PanelLP= () => {
         <PanelSection route={""} />
       </section>
     </div>
+    
   )
 }
 
