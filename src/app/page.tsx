@@ -1,9 +1,7 @@
 "use client"
-import { ChangeEvent, useState } from 'react'
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import Image from 'next/image'
+
 import classes from "./page.module.css"
-import PanelSection from '@/pages/PanelSection';
+
 import NavBar from '@/pages/NavBar';
 
 

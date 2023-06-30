@@ -15,18 +15,18 @@
     margin-left: 80%;
     margin-right: 2rem;
     border: 1px solid white;
-    border-radius: 3px;
+    border-radius: 6px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .barBtn {
     width: 5rem;
     height: 1.8rem;
-    background: rgb(48, 40, 81);
+    background: rgb(46, 41, 66);
     font-size: 12px;
     margin-left: 80%;
     margin-right: 2rem;
     border: 1px solid white;
-    border-radius: 3px;
+    border-radius: 6px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -38,6 +38,7 @@
     border-radius: 50%;
     margin-top: 0.4rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.2s ease-in-out;
 }
 .circleOff {
     background: rgb(246, 81, 86);
@@ -47,6 +48,7 @@
     border-radius: 50%;
     margin-top: 0.4rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.2s ease-in-out;
 }
 
 .containerActive {
