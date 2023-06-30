@@ -1,13 +1,28 @@
 .container {
     background: black;
     color: white;
+    padding: 2rem;
 }
-
-
+.heading {
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.text {
+    padding: 2rem;
+}
+.image {
+    margin: 1rem 10% 1rem 10% ;
+}
 .btn {
     border: 2px solid black;
     color: white;
+    height: 2rem;
+    width: 10rem;
     background: grey;
+    border: 2px solid white;
+    border-radius: 6px;
 }
 .btn:hover {
     background: rgb(209, 207, 207);

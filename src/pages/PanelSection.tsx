@@ -46,6 +46,7 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
   const inputSection = expandPrev ? classes.inputSectionActive : classes.inputSectionDis
   /* animition - iframe expand */
   const iframeExpand = showIframe ? classes.iframe : classes.iframeStart
+  
   return (
     <>
       <div className={classes.bar}>
@@ -54,24 +55,15 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
       </div>
       <div className={showContainer}>
         <section className={inputSection}>
-
           <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
           <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
           <button onClick={handleTestHost} className={classes.prevBtn}>Set Current URL</button>
         </section>
-
-        {/* <section className={classes.inputSection}>
-        <textarea className={classes.input}></textarea>
-        <button onClick={togglePrev} className={classes.prevBtn}>Preview File</button>
-      </section> */}
-
         <section>
           {/* IFRAME GOES HERE */}
-
-          {expandPrev && 
-          <iframe className={iframeExpand} title="Testing Iframe" src={inputOne}></iframe>}
+          {expandPrev &&
+            <iframe className={iframeExpand} title="Testing Iframe" src={inputOne}></iframe>}
         </section>
-
       </div>
     </>
   )
