@@ -45,6 +45,7 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
 
     <div className={classes.container}>
       <section className={classes.inputSection}>
+        
         <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
         <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
         <button onClick={handleTestHost} className={classes.prevBtn}>Set Current URL</button>

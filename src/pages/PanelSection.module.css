@@ -10,10 +10,11 @@
     margin: 1% 1% 1% 20%;
 }
 .input {
-    width: 20rem;
+    width: 25rem;
     border-radius: 6px;
     border: 2px solid grey;
     height: 2rem;
+    margin-right: 5%;
     color: black;
 }
 .prevBtn {
@@ -21,7 +22,7 @@
     background: grey;
     height: 2rem;
     width: 8rem;
-    margin-left: 4rem;
+    margin-left: 1rem;
     border-radius: 5px;
 }
 .prevBtn:hover {
