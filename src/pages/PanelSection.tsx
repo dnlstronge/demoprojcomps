@@ -35,20 +35,25 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
     setInputOne(appendURL)
     console.log(appendURL)
   }
+  const handleExpandPrev = () => {
+    setExpandPrev(!expandPrev)
+  }
 
   /* animation - dropdown expand*/
-
-
+  const circleColor = expandPrev ? classes.circle : classes.circleOff
+  const barbtn = !expandPrev ? classes.barBtn : classes.barBtnActive
+  const showContainer = !expandPrev ? classes.container : classes.containerActive
+  const inputSection = expandPrev ? classes.inputSectionActive : classes.inputSectionDis
   /* animition - iframe expand */
   const iframeExpand = showIframe ? classes.iframe : classes.iframeStart
   return (
     <>
       <div className={classes.bar}>
-        <button className={classes.barBtn}>Preview</button>
-        <span className={classes.circle}></span>
+        <button onClick={handleExpandPrev} className={barbtn}>{expandPrev ? `Hide` : `Show`}</button>
+        <span className={circleColor}></span>
       </div>
-      <div className={classes.container}>
-        <section className={classes.inputSection}>
+      <div className={showContainer}>
+        <section className={inputSection}>
 
           <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
           <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
@@ -63,8 +68,8 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
         <section>
           {/* IFRAME GOES HERE */}
 
-
-          <iframe className={iframeExpand} title="Testing Iframe" src={inputOne}></iframe>
+          {expandPrev && 
+          <iframe className={iframeExpand} title="Testing Iframe" src={inputOne}></iframe>}
         </section>
 
       </div>
