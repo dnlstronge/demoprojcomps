@@ -5,20 +5,22 @@ import "../app/globals.css"
 
 
 /* so app =====> posts on live server =====> rendered In Iframe here */
-// front end inits node which runs proj + sends server data to front-end. 
-// preview displays preview in template, gets specific route and renders
+// Too simplistic? 
+// preview display gets specific route from inoput and renders
+// - add hide/show
 
 const PanelSection: React.FC<{ route: string }> = (props) => {
 
   const [stringInput, setStringInput] = useState("")
-  const [showStringInput, setShowStringInput] = useState(false)
+  const [showIframe, setShowIframe] = useState(false)
   const [inputOne, setInputOne] = useState("")
   const [inputTwo, setInputTwo] = useState("")
   const [currentHost, setCurrentHost] = useState("")
+  const [expandPrev, setExpandPrev] = useState(false)
   const togglePrev = () => {
-    setShowStringInput(!showStringInput)
+    setShowIframe(!showIframe)
     const host = location.href
-    console.log(host)
+    //console.log(host)
     setCurrentHost(host)
   }
 
@@ -34,12 +36,18 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
     console.log(appendURL)
   } 
 
+  /* animation - dropdown expand*/
+
+
+  /* animition - iframe expand */
+  const iframeExpand = showIframe ? classes.iframe : classes.iframeStart 
   return (
+
     <div className={classes.container}>
       <section className={classes.inputSection}>
         <textarea value={inputOne} onChange={handleChangeInput} className={classes.input}></textarea>
         <button onClick={togglePrev} className={classes.prevBtn}>Preview Route</button>
-        <button onClick={handleTestHost} className={classes.prevBtn}>Set Host URL</button>
+        <button onClick={handleTestHost} className={classes.prevBtn}>Set Current URL</button>
       </section>
 
       {/* <section className={classes.inputSection}>
@@ -48,10 +56,10 @@ const PanelSection: React.FC<{ route: string }> = (props) => {
       </section> */}
 
       <section>
-        {/* I FRAME GOES HERE */}
+        {/* IFRAME GOES HERE */}
 
-        {showStringInput &&
-          <iframe className={classes.iframe} title="Testing Iframe" src={inputOne}></iframe>}
+       
+          <iframe className={iframeExpand} title="Testing Iframe" src={inputOne}></iframe>
       </section>
 
     </div>
