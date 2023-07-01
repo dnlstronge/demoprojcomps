@@ -11,6 +11,9 @@ const SampleTwo = () => {
     <Link href="/samples/SampleOne">
       <button className={classes.btn}>Go back</button>
     </Link>
+    <Link href="/samples/SampleThree">
+      <button className={classes.btn}>Next</button>
+    </Link>
       <h6 className={classes.heading}>Ipsum dolor sit amet consectetur.</h6>
      <div className={classes.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam vitae laboriosam repudiandae commodi repellat tenetur laborum odit distinctio, nam praesentium veritatis ullam porro. Explicabo animi doloribus commodi deleniti sapiente quidem iure veniam facere magnam eos minima provident saepe maiores, beatae debitis delectus eius repellat, corporis eligendi quaerat est quisquam velit ab.
          Iure labore id quod accusamus doloremque. Quaerat, quia laborum!</div>
