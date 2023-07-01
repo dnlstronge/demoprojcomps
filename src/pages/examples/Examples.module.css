@@ -2,11 +2,22 @@
 
 }
 .heading {
-
+    font-size: 20px;
+    margin-left: 3rem;
+    text-align: center;
+    margin-top: 1rem;
 }
 .buttonSection {
-
+    display: flex;
+    flex-direction: row;
+    margin-left: 3rem;
 }
 .btn {
-    
+    background: grey;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    height: 2rem;
+    width: 4rem;
+    margin-left: 1.5rem;
 }
