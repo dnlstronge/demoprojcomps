@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import classes from "./index.module.css"
 import Button from "../../app/components/Button"
 import "../../app/globals.css"
-
+import { database } from "../../../firebase/config"
+import { getDatabase, ref, set } from "firebase/database";
 /*
 [todo]
 
@@ -26,8 +27,12 @@ const Index = () => {
   }
 
   // send to db
-  const handleStore = () => {
+  const handleStore = async() => {
+    let stringed = JSON.stringify(jsxElement)
     console.log(jsxElement)
+    set(ref(database, "/components/current"), {
+      stringed
+    })
   }
 
   
