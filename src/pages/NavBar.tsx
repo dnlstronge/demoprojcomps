@@ -6,7 +6,7 @@ import Link from 'next/link'
 const NavBar = () => {
   return (
     <div className={classes.container}>
-      <Link href="/PanelSection">
+      <Link href="/components/Index">
       <button className={classes.btn}>React Components</button>
       </Link>
       <button className={classes.btn}>Example Pages</button>

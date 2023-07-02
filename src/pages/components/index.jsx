@@ -14,7 +14,7 @@ create individual custom component
 */
 
 
-const index = () => {
+const Index = () => {
   return (
     <div className={classes.container}>
         <h3 className={classes.heading}>Components</h3>
@@ -25,4 +25,4 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;
