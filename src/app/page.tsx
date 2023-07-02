@@ -1,7 +1,7 @@
 "use client"
 
+import Button from "./components/Button";
 import classes from "./page.module.css"
-
 import NavBar from '@/pages/NavBar';
 
 
@@ -13,9 +13,12 @@ export default function Home() {
 
   /* change state & code input / handlers */
 
+
+ 
   return (
     <main className={classes.main}>
     <NavBar />
+     
     </main>
   )
 }
